@@ -1,10 +1,10 @@
 ### Verfahren und Werkzeuge moderner Softwareentwicklung
 
 ## UE1
-UML Modellierung (nicht im Repository)
+UML Modellierung
 
 ## UE2
-Metriken (nicht im Repository)
+Metriken (noch nicht im Repository)
 
 ## UE3
 Clean Code Development (WIP)

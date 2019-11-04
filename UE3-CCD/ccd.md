@@ -1,0 +1,6 @@
+- TDD
+- sprechende Namen
+- Dokumentation
+- DRY
+- KISS
+- ...
