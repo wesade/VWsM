@@ -11,6 +11,7 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface ShoppingList {
+    'btnText': string;
     'name': string;
     'value': string;
   }
@@ -31,6 +32,7 @@ declare global {
 
 declare namespace LocalJSX {
   interface ShoppingList {
+    'btnText'?: string;
     'name'?: string;
     'value'?: string;
   }
