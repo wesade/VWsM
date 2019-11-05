@@ -11,18 +11,8 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface ShoppingList {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
+    'name': string;
+    'value': string;
   }
 }
 
@@ -41,18 +31,8 @@ declare global {
 
 declare namespace LocalJSX {
   interface ShoppingList {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
+    'name'?: string;
+    'value'?: string;
   }
 
   interface IntrinsicElements {

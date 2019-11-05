@@ -1,32 +1,17 @@
-import { Component, Prop, h } from '@stencil/core';
-import { format } from '../utils/utils';
+import {Component, Prop, h} from '@stencil/core';
+import { List } from './list';
 
 @Component({
-  tag: 'shopping-list',
-  styleUrl: 'shopping-list.scss',
-  shadow: true
+    tag: 'shopping-list',
+    styleUrl: 'shopping-list.scss',
+    shadow: true
 })
 export class ShoppingList {
-  /**
-   * The first name
-   */
-  @Prop() first: string;
 
-  /**
-   * The middle name
-   */
-  @Prop() middle: string;
+    @Prop() name: string;
+    @Prop() value: string;
 
-  /**
-   * The last name
-   */
-  @Prop() last: string;
-
-  private getText(): string {
-    return format(this.first, this.middle, this.last);
-  }
-
-  render() {
-    return <div>Hello, World! I'm {this.getText()}</div>;
-  }
+    render() {
+        return <List name={this.name} value={this.value}></List>;
+    }
 }

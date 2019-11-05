@@ -18,6 +18,7 @@
   },
   "include": [
     "src",
+    "tests",
     "types/jsx.d.ts"
   ],
   "exclude": [
