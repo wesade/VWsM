@@ -3,4 +3,14 @@
 - Dokumentation
 - DRY
 - KISS
+- Versionsverwaltungssystem
+- Code Review
+- spezialisierte Aufgaben (eine Aufgabe pro Funktion)
+- Pair/Mobprogramming - ggf. Verweis auf eigene Arbeit (?)
+- Kanban
+- Performance
+- YAGNI(You ain't gonna need it - nur Code schreiben, der aktuell benötigt wird)
+- CI
+- Dashboards (Logging)
+- Pattern
 - ...
