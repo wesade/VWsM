@@ -21,7 +21,8 @@ mit den Kommandos, die Test Coverage zu starten.
 
 ### Ausführung
 
-Das vorliegende Projekt wurde mit Stencil (https://stenciljs.com/) aufgesetzt. Stencil bringt den Befehl
+Das vorliegende Projekt (https://github.com/wesade/VWsM/tree/master/UE3-CCD/shopping-list)
+wurde mit Stencil (https://stenciljs.com/) aufgesetzt. Stencil bringt den Befehl
     
     npm run test
     
