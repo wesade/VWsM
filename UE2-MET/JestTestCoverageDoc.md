@@ -98,7 +98,7 @@ entsprechende Quellcode implementiert:
         return <input type="text" name={name} value={value} />
     };
 
-Werden die Test erneut ausgeführt, ist zu sehen, dass der oben dokumentierte Fehler behoben ist.
+Werden die Tests erneut ausgeführt, ist zu sehen, dass der oben dokumentierte Fehler behoben ist.
 
 ![Erfolgreicher Test](assets/SucceededTest.png)
 
@@ -106,19 +106,19 @@ Werden die Test erneut ausgeführt, ist zu sehen, dass der oben dokumentierte Fe
 
 Wenn in einer Datei mehrere Tests implementiert sind und ggf. durch eine Codeimplementierung fehl schlagen, 
 kann dies sehr unübersichtlich werden.
-Es besteht dann die Möglichkeit, bestimmte Tests zu deaktivieren, indem ein x an den auszuführenden
+Es besteht dann die Möglichkeit, bestimmte Tests zu deaktivieren, indem ein *x* an den auszuführenden
 Test vorangestellt wird.
 
     xit('should render an input field with value' ...);
     xdescribe('Shopping List Input',...);
     
-Alternativ ist es auch möglich, nur einzelne Tests auszuführen. In diesem Fall wird das Schlüsselwort *only* genutzt.
+Alternativ ist es auch möglich, nur einzelne Tests auszuführen. In diesem Fall findet das Schlüsselwort *only* seine Verwendung.
 
     it.only('should render an input field with value' ...);
     describe.only('Shopping List Input',...);
 
 Zu beachten ist bei Stencil jedoch, dass in der *package.json* nur die zu testende Datei
-in dem entsprechenden Test-Befehl angegeben ist.
+in dem entsprechenden Test-Befehl angegeben werden muss.
 
     "test": "stencil test --spec tests/input.spec.ts",   
     
@@ -136,6 +136,6 @@ Testabdeckung zu schaffen, da besonders so Fehler in der Implementierung vermied
 (Stichwort Test-Driven-Development). 
 
 Wenn Zeitdruck besteht und ein Release an eine Frist gebunden ist, werden unter Anderem Tests weg gelassen. 
-Diese werden dann im Nachgang implementiert und haben bereits schon Fehlimplementierungen aufgedeckt.
+Diese werden dann im Nachgang implementiert und haben in der Praxis bereits schon Fehlimplementierungen aufgedeckt.
 
-Kurz und knapp würde ich dazu sagen: "Tests gurten den Quellcode fest."
+Kurz und knapp würde ich dazu sagen: "Tests gurten/zurren den Quellcode fest."
