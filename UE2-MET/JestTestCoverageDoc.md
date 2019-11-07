@@ -1,4 +1,4 @@
-## Dokumentation zur Nutzung der Test Coverage von Jest
+## Dokumentation zur Nutzung der Jest-Test Coverage
 
 Jest ist ein JavaScript Test-Framework, das den Schwerpunkt auf Einfachheit legt. Es funktioniert
 mit Projekten die Babel, TypeScript, Node, React, Angular, Vue 
@@ -19,7 +19,9 @@ die Jest definiert, auch das entsprechende NPM Modul benötigt.
 Des Weiteren ist es möglich, die Jest-CLI (https://jestjs.io/docs/en/cli) zu installieren und entsprechend
 mit den Kommandos, die Test Coverage zu starten.
 
-Das vorliegende Projekt wurde mit Stencil (https://stenciljs.com/) aufgesetzt. Stencil bringt in den Befehl
+### Ausführung
+
+Das vorliegende Projekt wurde mit Stencil (https://stenciljs.com/) aufgesetzt. Stencil bringt den Befehl
     
     npm run test
     
@@ -29,7 +31,8 @@ ausgeführt:
     npm run test --coverage
     
 In der Kommandozeile erscheint nun eine Übersicht, welche Tests
-entsprechend prozentual abgedeckt sind.
+entsprechend prozentual abgedeckt sind. Durch das Projekt-Setup mit Stencil
+werden hier bereits vier Tests ausgeführt.
 
 ![Commandline](assets/Terminal.png)
 
@@ -46,9 +49,12 @@ eingesehen werden .
 
 ![Coverage im Detail](assets/DetailedInitialCoverage.png)
 
-Es ist zu sehen, wie oft Funktionen getestet wurden. (Hier der Rückgabewert 4x).
+Es ist zu sehen, wie oft einzelne Codezeilen getestet wurden.
 
-Für das Projekt Shopping-List () wurde nun ein Test angelegt
+### Das eigene Projekt
+
+Für das Projekt Shopping-List (https://github.com/wesade/VWsM/tree/master/UE3-CCD/shopping-list)
+wurde nun ein erster Test angelegt. In dem vorliegenden Projekt wird die Designstrategie der testgetriebenen Entwicklung angewandt.
     
     describe('Shopping List Input', () => {
         it('should render an input field', async () => {
@@ -67,7 +73,9 @@ Wenn nun die Code-Coverage ausgeführt wird, ist zu sehen, dass ein Test fehl ge
 eine 100%ige Testabdeckung vorliegt:
 ![Fehlgeschlagener Test](assets/CrashedTest.png)
 
-Über der Coverage wird der Fehler angezeigt:
+Das heißt, dass die Implementierung noch nicht korrekt ist, aber alle Codezeilen mit diesem Test abgedeckt sind.
+
+Im Terminal wird der Fehler angezeigt, der für das Fehlschlagen des Tests sorgt:
 
      Shopping List Input › should render an input field
     
@@ -82,14 +90,30 @@ eine 100%ige Testabdeckung vorliegt:
     
           at Object.it (tests/input.spec.ts:13:67)
 
-Die Implementierung des Inputfeldes ist noch nicht erfolgt. Um den Test nun erfolgreich auszuführen, wird der
+Um den Test nun erfolgreich auszuführen, wird der
 entsprechende Quellcode implementiert.
 
 ![Erfolgreicher Test](assets/SucceededTest.png)
 
-Es kann manchmal etwas unübersichtlich werden, wenn mehrere Tests fehl schalgen.
-Es besteht die Möglichkeit, bestimmte Tests zu deaktivieren, indem ein x vor den auszuführenden
-Test gesetzt wird
+### Hinweis
+
+Wenn in einer Datei mehrere Tests implementiert sind und ggf. durch eine Codeimplementierung fehl schlagen, 
+kann dies sehr unübersichtlich werden.
+Es besteht dann die Möglichkeit, bestimmte Tests zu deaktivieren, indem ein x an den auszuführenden
+Test vorangestellt wird.
 
     xit('should render an input field with value' ...);
     xdescribe('Shopping List Input',...);
+    
+### Erfahrungen
+
+Bereits durch die umfangreiche Praxis im Büro meines Arbeitgebers, konnte ich umfassende Kenntnisse und Erfahrungen 
+im Umgang mit der Jest-Test Coverage sammeln. Der Aussage, dass Jest den Schwerpunkt auf Einfachheit legt, kann ich
+zustimmen. Oftmals habe ich auch die Erkenntnis gewonnen, dass es sinnvoll ist, eine umfangreiche und ausreichende
+Testabdeckung zu schaffen, da besonders so Fehler in der Implementierung vermieden werden können 
+(Stichwort Test-Driven-Development). 
+
+Wenn Zeitdruck besteht und ein Release an eine Frist gebunden ist, werden unter Anderem Tests weg gelassen. 
+Diese werden dann im Nachgang implementiert und haben bereits schon Fehlimplementierungen aufgedeckt.
+
+Kurz und knapp würde ich dazu sagen: "Tests gurten den Quellcode fest."
