@@ -31,7 +31,7 @@ ausgeführt:
 
     npm run test --coverage
     
-In der Kommandozeile erscheint nun eine Übersicht, welche Tests
+In der Kommandozeile erscheint eine Übersicht, die anzeigt, welche Tests
 entsprechend prozentual abgedeckt sind. Durch das Projekt-Setup mit Stencil
 werden hier bereits vier Tests ausgeführt.
 
@@ -46,7 +46,7 @@ Es ist dann auch möglich, die Test-Coverage im Browser aufzurufen.
 ![Coverage](assets/InitialCoverage.png)
 
 Des Weiteren kann die Testabdeckung einzeln getesteter Dateien
-eingesehen werden .
+eingesehen worden sind.
 
 ![Coverage im Detail](assets/DetailedInitialCoverage.png)
 
@@ -92,7 +92,13 @@ Im Terminal wird der Fehler angezeigt, der für das Fehlschlagen des Tests sorgt
           at Object.it (tests/input.spec.ts:13:67)
 
 Um den Test nun erfolgreich auszuführen, wird der
-entsprechende Quellcode implementiert.
+entsprechende Quellcode implementiert:
+
+    export const InputField = ( { name, value } ) => {
+        return <input type="text" name={name} value={value} />
+    };
+
+Werden die Test erneut ausgeführt, ist zu sehen, dass der oben dokumentierte Fehler behoben ist.
 
 ![Erfolgreicher Test](assets/SucceededTest.png)
 
@@ -105,6 +111,21 @@ Test vorangestellt wird.
 
     xit('should render an input field with value' ...);
     xdescribe('Shopping List Input',...);
+    
+Alternativ ist es auch möglich, nur einzelne Tests auszuführen. In diesem Fall wird das Schlüsselwort *only* genutzt.
+
+    it.only('should render an input field with value' ...);
+    describe.only('Shopping List Input',...);
+
+Zu beachten ist bei Stencil jedoch, dass in der *package.json* nur die zu testende Datei
+in dem entsprechenden Test-Befehl angegeben ist.
+
+    "test": "stencil test --spec tests/input.spec.ts",   
+    
+Im Terminal werden dann nur die Tests ausgeführt, die mit dem Schlüsselwort *only* versehen sind.
+Alle weiteren Tests werden übersprungen, wie in dem Bild zu sehen ist.
+
+![Tests die übersprungen werden](assets/SkippedTests.png)
     
 ### Erfahrungen
 
