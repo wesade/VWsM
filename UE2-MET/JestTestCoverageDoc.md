@@ -21,7 +21,7 @@ mit den Kommandos, die Test Coverage zu starten.
 
 ### Ausführung
 
-Das vorliegende Projekt (https://github.com/wesade/VWsM/tree/master/UE3-CCD/shopping-list)
+Das vorliegende Projekt (https://github.com/wesade/VWsM/tree/master/shopping-list)
 wurde mit Stencil (https://stenciljs.com/) aufgesetzt. Stencil bringt den Befehl
     
     npm run test
@@ -54,7 +54,7 @@ Es ist zu sehen, wie oft einzelne Codezeilen getestet wurden.
 
 ### Das eigene Projekt
 
-Für das Projekt Shopping-List (https://github.com/wesade/VWsM/tree/master/UE3-CCD/shopping-list)
+Für das Projekt Shopping-List (https://github.com/wesade/VWsM/tree/master/shopping-list)
 wurde nun ein erster Test angelegt. In dem vorliegenden Projekt wird die Designstrategie der testgetriebenen Entwicklung angewandt.
     
     describe('Shopping List Input', () => {
