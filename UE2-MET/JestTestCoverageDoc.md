@@ -11,17 +11,17 @@ ist das Node Package Modul in die devDependencies zu installieren.
 
     npm install --save-dev jest
     
-Außerdem wird für das Nutzen der Typen (https://www.npmjs.com/package/@types/jest), 
+Außerdem wird für das Nutzen der [Typen](https://www.npmjs.com/package/@types/jest), 
 die Jest definiert, auch das entsprechende NPM Modul benötigt.
 
     npm install --save @types/jest
     
-Des Weiteren ist es möglich, die Jest-CLI (https://jestjs.io/docs/en/cli) zu installieren und entsprechend
+Des Weiteren ist es möglich, die [Jest-CLI](https://jestjs.io/docs/en/cli) zu installieren und entsprechend
 mit den Kommandos, die Test Coverage zu starten.
 
 ### Ausführung
 
-Das vorliegende Projekt (https://github.com/wesade/VWsM/tree/master/shopping-list)
+Das vorliegende [Projekt](https://github.com/wesade/VWsM/tree/master/shopping-list)
 wurde mit Stencil (https://stenciljs.com/) aufgesetzt. Stencil bringt den Befehl
     
     npm run test
@@ -54,7 +54,7 @@ Es ist zu sehen, wie oft einzelne Codezeilen getestet wurden.
 
 ### Das eigene Projekt
 
-Für das Projekt Shopping-List (https://github.com/wesade/VWsM/tree/master/shopping-list)
+Für das Projekt [Shopping-List](https://github.com/wesade/VWsM/tree/master/shopping-list)
 wurde nun ein erster Test angelegt. In dem vorliegenden Projekt wird die Designstrategie der testgetriebenen Entwicklung angewandt.
     
     describe('Shopping List Input', () => {
