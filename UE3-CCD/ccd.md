@@ -1,16 +1,19 @@
-- TDD
-- sprechende Namen
-- Dokumentation
-- DRY
-- KISS
+## Checkliste
 - Versionsverwaltungssystem
-- Code Review
+- Dokumentation
+- Test-Driven-Development
+- sprechende Namen
+- YAGNI(You ain't gonna need it - nur Code schreiben, der aktuell benötigt wird)
+- DRY (Do not repeat yourself)
+- KISS (Keep it simple, stupid)
 - spezialisierte Aufgaben (eine Aufgabe pro Funktion)
-- Pair/Mobprogramming - ggf. Verweis auf eigene Arbeit (?)
+- Code Review
+
+### weitere Aspekte für Clean Code
+- Pair/Mobprogramming
 - Kanban
 - Performance
-- YAGNI(You ain't gonna need it - nur Code schreiben, der aktuell benötigt wird)
-- CI
+- Continuous Integration
 - Dashboards (Logging)
 - Pattern
 - ...
